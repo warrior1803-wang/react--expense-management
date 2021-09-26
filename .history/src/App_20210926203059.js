@@ -25,9 +25,9 @@ function App() {
 
   return (
     <div>
-    <Expenses expenses={expenses}
+    <Expenses
    
-    ></Expenses>
+    date={expenses[0].date}></Expenses>
      
     </div>
   );
