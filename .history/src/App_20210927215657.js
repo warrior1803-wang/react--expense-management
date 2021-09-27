@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <div>
-     <NewExpense></NewExpense>
+      NewExpense
     <Expenses expenses={expenses}
    
     ></Expenses>

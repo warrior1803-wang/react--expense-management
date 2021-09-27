@@ -27,7 +27,6 @@ const App = () => {
 
   return (
     <div>
-     <NewExpense></NewExpense>
     <Expenses expenses={expenses}
    
     ></Expenses>
