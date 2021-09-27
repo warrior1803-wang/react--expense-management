@@ -6,10 +6,8 @@ import React, { useState } from "react";
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title);
 
-  const clickHandler = () => {
-    setTitle('upated');
-  };
-  
+  const clickHandler = () => {};
+  setTitle();
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date}></ExpenseDate>
