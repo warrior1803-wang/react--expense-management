@@ -32,9 +32,9 @@ const ExpenseForm = () => {
   // };
   //eslint-disable-next-line
   const [enteredDate, setEnteredDate] = useState("");
-  const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
-  };
+  // const dateChangeHandler = (event) => {
+  //   setEnteredDate(event.target.value);
+  // };
   
   //   setUserInput({
   //     ...userInput,
