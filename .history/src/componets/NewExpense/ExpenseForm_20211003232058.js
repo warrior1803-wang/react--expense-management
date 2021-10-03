@@ -8,39 +8,33 @@ const ExpenseForm = () => {
   //   enteredDate: "",
   // });
   //eslint-disable-next-line
-  const [enteredTitle, setEnteredTitle] = useState("");
-
+  // const [enteredTitle, setEnteredTitle] = useState("");
   const titleChangeHandler = (event) => {
-    setEnteredTitle(event.target.value);
+    // setEnteredTitle(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredTitle: event.target.value,
+      
+    });
   };
-  //   setUserInput({
-  //     ...userInput,
-  //     enteredTitle: event.target.value,
-
-  //   });
-  // };
   //eslint-disable-next-line
-  const [enteredAmount, setEnteredAmount] = useState("");
+  // const [enteredAmount, setEnteredAmount] = useState("");
   const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredAmount: event.target.value,
+      
+    });
   };
-  //   setUserInput({
-  //     ...userInput,
-  //     enteredAmount: event.target.value,
-
-  //   });
-  // };
   //eslint-disable-next-line
-  const [enteredDate, setEnteredDate] = useState("");
+  // const [enteredDate, setEnteredDate] = useState("");
   const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
+    setUserInput({
+      ...userInput,
+      enteredDate: event.target.value,
+      
+    });
   };
-  //   setUserInput({
-  //     ...userInput,
-  //     enteredDate: event.target.value,
-
-  //   });
-  // };
   return (
     <form>
       <div className="new-expense__controls">
