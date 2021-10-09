@@ -3,11 +3,8 @@ import "../../style/Expenses.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 const Expenses = (props) => {
-
+  
   //stored it in a state
-  const onFilterExpenseYearHandler = (selectedYear) =>{
-    console.log(selectedYear)
-  }
   return (
     <div>
       

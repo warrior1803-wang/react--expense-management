@@ -6,7 +6,7 @@ const Expenses = (props) => {
 
   //stored it in a state
   const onFilterExpenseYearHandler = (selectedYear) =>{
-    console.log(selectedYear)
+    const selectedYear = {}
   }
   return (
     <div>

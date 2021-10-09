@@ -1,19 +1,10 @@
 import ExpenseItem from "./ExpenseItem";
 import "../../style/Expenses.css";
 import Card from "../UI/Card";
-import ExpensesFilter from "./ExpensesFilter";
 const Expenses = (props) => {
-
-  //stored it in a state
-  const onFilterExpenseYearHandler = (selectedYear) =>{
-    console.log(selectedYear)
-  }
   return (
     <div>
-      
-      <ExpensesFilter onFilterExpenseYear = {onFilterExpenseYearHandler}/>
-      
-    {/* 从app.js 传数据给expenses，再传数据给expenseItem，这是parent-child */}
+    //从app.js 传数据给expenses，再传数据给expenseItem，这是parent-child
     <Card className="expenses">
       <ExpenseItem
         title={props.item[0].title}
@@ -35,7 +26,7 @@ const Expenses = (props) => {
         amount={props.item[3].amount}
         date={props.item[3].date}
       ></ExpenseItem>
-    </Card></div>
+    </Card>
   );
 };
 
