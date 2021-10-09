@@ -30,8 +30,8 @@ const addExpenseHandler = (expense) =>{
 }
   return (
     <div>
-     <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
-    <Expenses item={expenses}
+     <NewExpense></NewExpense>
+    <Expenses expenses={expenses}
    
     ></Expenses>
      
