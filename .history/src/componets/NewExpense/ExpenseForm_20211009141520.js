@@ -47,10 +47,8 @@ const ExpenseForm = () => {
     const expenseData = {
       title: enteredTitle,
       amount : enteredAmount,
-      date: new Date(enteredDate),
-    };
-
-    console.log(expenseData)
+      date: new Date(enteredDate)
+    }
 
   }
   return (
@@ -65,7 +63,7 @@ const ExpenseForm = () => {
           <input
             type="number"
             min="0.01"
-            step="0.01"
+            step="0,01"
             onChange={amountChangeHandler}
           />
         </div>

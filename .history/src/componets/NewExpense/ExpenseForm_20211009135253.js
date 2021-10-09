@@ -42,15 +42,7 @@ const ExpenseForm = () => {
 
   //   });
   // };
-  const submitHandler = (event) =>{
-    event.preventDefault();
-    const expenseData = {
-      title: enteredTitle,
-      amount : enteredAmount,
-      date: new Date(enteredDate),
-    };
-
-    console.log(expenseData)
+  const submitHandler = () =>{
 
   }
   return (
@@ -65,7 +57,7 @@ const ExpenseForm = () => {
           <input
             type="number"
             min="0.01"
-            step="0.01"
+            step="0,01"
             onChange={amountChangeHandler}
           />
         </div>
