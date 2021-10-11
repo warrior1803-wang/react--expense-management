@@ -1,24 +1,20 @@
 import ExpenseItem from "./ExpenseItem";
-import React, { useState } from 'react';
-
 import "../../style/Expenses.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 const Expenses = (props) => {
-const [filteredYear, setFilteredYear] = useState("2021");
+const [filteredYear, setFilteredYear] = useState("2020");
   //stored it in a state
   const onFilterExpenseYearHandler = (selectedYear) =>{
- 
-    setFilteredYear(selectedYear)
+    console.log(selectedYear)
   }
   return (
     <div>
       
+      <ExpensesFilter onFilterExpenseYear = {onFilterExpenseYearHandler}/>
       
     {/* 从app.js 传数据给expenses，再传数据给expenseItem，这是parent-child */}
     <Card className="expenses">
-    <ExpensesFilter selected={filteredYear} onFilterExpenseYear = {onFilterExpenseYearHandler}/>
-
       <ExpenseItem
         title={props.item[0].title}
         amount={props.item[0].amount}
