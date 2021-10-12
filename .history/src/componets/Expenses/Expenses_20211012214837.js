@@ -10,10 +10,7 @@ const Expenses = (props) => {
   const onFilterExpenseYearHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
-  const filteredExpenses = props.items.filter(expense =>{
-    return expense.date.getFullYear().toString()===filteredYear;
-  });
-  //hint1: filter method hint2: should not change the overall expense array, sub array for the chosen filter
+  //hint1: filter method hint2: 
   return (
     <div>
       {/* 从app.js 传数据给expenses，再传数据给expenseitems，这是parent-child */}
@@ -23,7 +20,7 @@ const Expenses = (props) => {
           onFilterExpenseYear={onFilterExpenseYearHandler}
         />
         {/* props.itemss is array of expenses */}
-        {filteredExpenses.map((expense) => (
+        {props.items.map((expense) => (
           <ExpenseItem
           key={expense.id}
             title={expense.title}
@@ -31,9 +28,6 @@ const Expenses = (props) => {
             date={expense.date}
           />
         ))}
-         
-        
-        
    
       </Card>
     </div>
