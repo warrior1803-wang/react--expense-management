@@ -1,4 +1,4 @@
-import ExpenseItem from "./ExpenseItem";
+import Expenseitems from "./Expenseitems";
 import React, { useState } from "react";
 
 import "../../style/Expenses.css";
@@ -20,7 +20,7 @@ const Expenses = (props) => {
         />
         {/* props.itemss is array of expenses */}
         {props.items.map((expense) => (
-          <ExpenseItem
+          <Expenseitems
             title={expense.title}
             amount={expense.amount}
             date={expense.date}

@@ -1,4 +1,4 @@
-import ExpenseItem from "./ExpenseItem";
+import Expenseitems from "./Expenseitems";
 import React, { useState } from "react";
 
 import "../../style/Expenses.css";
@@ -20,13 +20,32 @@ const Expenses = (props) => {
         />
         {/* props.itemss is array of expenses */}
         {props.items.map((expense) => (
-          <ExpenseItem
+          <Expenseitems
             title={expense.title}
             amount={expense.amount}
             date={expense.date}
           />
         ))}
-   
+        <Expenseitems
+          title={props.items[0].title}
+          amount={props.items[0].amount}
+          date={props.items[0].date}
+        ></Expenseitems>
+        <Expenseitems
+          title={props.items[1].title}
+          amount={props.items[1].amount}
+          date={props.items[1].date}
+        ></Expenseitems>
+        <Expenseitems
+          title={props.items[2].title}
+          amount={props.items[2].amount}
+          date={props.items[2].date}
+        ></Expenseitems>
+        <Expenseitems
+          title={props.items[3].title}
+          amount={props.items[3].amount}
+          date={props.items[3].date}
+        ></Expenseitems>
       </Card>
     </div>
   );
