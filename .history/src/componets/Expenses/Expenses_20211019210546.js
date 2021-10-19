@@ -35,9 +35,9 @@ const Expenses = (props) => {
           selected={filteredYear}
           onFilterExpenseYear={onFilterExpenseYearHandler}
         />
-      
-      
-       {expenseContent}
+        {/* props.itemss is array of expenses */}
+        {filteredExpenses.length === 0 && <p>No expenses found.</p>}
+   
       </Card>
     </div>
   );

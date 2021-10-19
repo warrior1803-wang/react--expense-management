@@ -35,8 +35,9 @@ const Expenses = (props) => {
           selected={filteredYear}
           onFilterExpenseYear={onFilterExpenseYearHandler}
         />
-      
-      
+        {/* props.itemss is array of expenses */}
+        {/* {some people look serious on the outside, 
+        but they are checking celebrty gossip} */}
        {expenseContent}
       </Card>
     </div>

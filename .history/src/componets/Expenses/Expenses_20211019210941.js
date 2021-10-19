@@ -36,7 +36,8 @@ const Expenses = (props) => {
           onFilterExpenseYear={onFilterExpenseYearHandler}
         />
       
-      
+        {/* some people look serious on the outside, 
+        but they are checking celebrty gossip */}
        {expenseContent}
       </Card>
     </div>
