@@ -18,7 +18,7 @@ const Expenses = (props) => {
   return (
     <div>
       {/* 从app.js 传数据给expenses，再传数据给expenseitems，这是parent-child */}
-      <li>
+      <li></li>
       <Card className="expenses">
         <ExpensesFilter
           selected={filteredYear}
@@ -26,7 +26,6 @@ const Expenses = (props) => {
         />
       <ExpenseList filteredData = {filteredExpenses}/>
       </Card>
-      </li>
     </div>
   );
 };

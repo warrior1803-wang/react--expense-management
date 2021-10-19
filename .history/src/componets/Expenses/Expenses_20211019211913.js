@@ -3,7 +3,6 @@ import ExpenseList from "./ExpenseList"
 import "../../style/Expenses.css";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
-
 const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState("2021");
   //stored it in a state
@@ -18,7 +17,6 @@ const Expenses = (props) => {
   return (
     <div>
       {/* 从app.js 传数据给expenses，再传数据给expenseitems，这是parent-child */}
-      <li>
       <Card className="expenses">
         <ExpensesFilter
           selected={filteredYear}
@@ -26,7 +24,6 @@ const Expenses = (props) => {
         />
       <ExpenseList filteredData = {filteredExpenses}/>
       </Card>
-      </li>
     </div>
   );
 };
