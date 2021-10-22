@@ -1,0 +1,4 @@
+const CharBar = (props) => {
+    
+}
+exd
