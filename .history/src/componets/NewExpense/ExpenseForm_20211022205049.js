@@ -47,7 +47,7 @@ const ExpenseForm = (props) => {
     const expenseData = {
       title: enteredTitle,
     //Operator + 可用于将变量转换为数字：或者Number（）
-      amount: +enteredAmount,
+      amount: Number(enteredAmount),
       date: new Date(enteredDate),
     };
       //typeof 查数据类型

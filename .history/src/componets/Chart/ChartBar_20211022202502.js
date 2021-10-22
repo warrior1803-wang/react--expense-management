@@ -1,4 +1,4 @@
-import '../../style/ChartBar.css'
+import '../../style/c'
 const ChartBar = (props) => {
     let barFillHeight = '0%';
     if (props.maxValue > 0) {

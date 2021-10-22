@@ -46,17 +46,14 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-    //Operator + 可用于将变量转换为数字：或者Number（）
-      amount: +enteredAmount,
+      amount: enteredAmount,
       date: new Date(enteredDate),
     };
-      //typeof 查数据类型
-    // console.log(typeof(expenseData.amount))
+
   props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
-    
   };
   return (
     <form onSubmit={submitHandler}>
@@ -74,7 +71,7 @@ const ExpenseForm = (props) => {
           <label>Amount</label>
           <input
             value={enteredAmount}
-            type="number"
+            type="string"
             step="0.01"
             onChange={amountChangeHandler}
           />
