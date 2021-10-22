@@ -19,19 +19,24 @@ const NewExpense = (props) => {
     setChange(!change);
     console.log(change);
   };
-
-  let newExpsenseContent = <button onClick={stateChangeHandler}>New Expense</button>;
-  if (change===true) {
-    newExpsenseContent=<ExpenseForm
-    onSaveExpenseData={onSaveExpenseDataHandler}
-    onChangeState={stateChangeHandler}
-  ></ExpenseForm>
+  // const stopEditingHandler = () => {
+  //   setChange(false);
+  // };
+  let newExpenseBtn = <button onClick={stateChangeHandler}>New Expense</button>;
+  if (change=false) {
     
   }
   return (
     <div className="new-expense">
       
-      {newExpsenseContent}
+      {!change && <button onClick={stateChangeHandler}>New Expense</button>}
+
+      {change && (
+        <ExpenseForm
+          onSaveExpenseData={onSaveExpenseDataHandler}
+          onChangeState={stateChangeHandler}
+        ></ExpenseForm>
+      )}
     </div>
   );
 };

@@ -19,19 +19,20 @@ const NewExpense = (props) => {
     setChange(!change);
     console.log(change);
   };
-
-  let newExpsenseContent = <button onClick={stateChangeHandler}>New Expense</button>;
-  if (change===true) {
-    newExpsenseContent=<ExpenseForm
-    onSaveExpenseData={onSaveExpenseDataHandler}
-    onChangeState={stateChangeHandler}
-  ></ExpenseForm>
-    
-  }
+  // const stopEditingHandler = () => {
+  //   setChange(false);
+  // };
   return (
     <div className="new-expense">
-      
-      {newExpsenseContent}
+      不可以直接写change=false，这样是永久改变值
+      {!change && <button onClick={stateChangeHandler}>New Expense</button>}
+
+      {change && (
+        <ExpenseForm
+          onSaveExpenseData={onSaveExpenseDataHandler}
+          onChangeState={stateChangeHandler}
+        ></ExpenseForm>
+      )}
     </div>
   );
 };

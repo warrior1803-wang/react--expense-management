@@ -11,27 +11,28 @@ const NewExpense = (props) => {
       id: Math.random().toString(),
     };
     props.onAddExpense(expenseData);
-    setChange(!change);
   };
-  const [change, setChange] = useState(false);
+  const [change, setchange] = useState("false");
 
   const stateChangeHandler = () => {
-    setChange(!change);
+    setchange("true");
     console.log(change);
   };
 
-  let newExpsenseContent = <button onClick={stateChangeHandler}>New Expense</button>;
-  if (change===true) {
-    newExpsenseContent=<ExpenseForm
-    onSaveExpenseData={onSaveExpenseDataHandler}
-    onChangeState={stateChangeHandler}
-  ></ExpenseForm>
-    
-  }
   return (
     <div className="new-expense">
-      
-      {newExpsenseContent}
+      {
+        (change  = true ? (
+          <div className="newExpense">
+            <button onClick={stateChangeHandler}>New Expense</button>
+          </div>
+        ) : (
+          <ExpenseForm
+            onSaveExpenseData={onSaveExpenseDataHandler}
+            onChangeState={stateChangeHandler}
+          ></ExpenseForm>
+        ))
+      }
     </div>
   );
 };

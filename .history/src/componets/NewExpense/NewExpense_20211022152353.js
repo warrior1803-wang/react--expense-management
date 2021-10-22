@@ -20,9 +20,9 @@ const NewExpense = (props) => {
     console.log(change);
   };
 
-  let newExpsenseContent = <button onClick={stateChangeHandler}>New Expense</button>;
+  let newExpenseBtn = <button onClick={stateChangeHandler}>New Expense</button>;
   if (change===true) {
-    newExpsenseContent=<ExpenseForm
+    newExpenseBtn=<ExpenseForm
     onSaveExpenseData={onSaveExpenseDataHandler}
     onChangeState={stateChangeHandler}
   ></ExpenseForm>
@@ -31,7 +31,7 @@ const NewExpense = (props) => {
   return (
     <div className="new-expense">
       
-      {newExpsenseContent}
+      {newExpenseBtn}
     </div>
   );
 };
